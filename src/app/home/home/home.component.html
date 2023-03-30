@@ -1,0 +1,93 @@
+<style>
+
+.containerHeader{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.titleHeader{
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+}
+.textContainer{
+  text-align: center;
+  margin-bottom: 20px;
+  width: 40rem;
+}
+.containerAboutUs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3%;
+  flex-direction: column;
+}
+.titleAboutUs{
+  display: flex;
+  align-items: center;
+}
+.textAboutUs{
+  display: flex;
+  align-items: center;
+  width: 85rem;
+}
+h1{
+  color: 	#8B0000;
+  font-family: 'Creepster', cursive;
+  font-size: 5rem;
+}
+h2{
+  color: 	#8B0000;
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+}
+p{
+  font-size: 18px;
+  font-family: 'Merienda', cursive;
+}
+img{
+  height: 10rem;
+}
+button{
+  cursor: pointer;
+  width: 15rem;
+  height: 5rem;
+  background-color: #EEEEEE;
+  color: 	#8B0000;
+  font-family: 'Creepster', cursive;
+  border: transparent;
+  font-size: 20px;
+}
+</style>
+
+<div class="containerHeader">
+  <div class="titleHeader">
+    <span><img src="assets/img/cat2.png"></span>
+    <h1>Bem-vindo ao HorrorStories!</h1>
+  </div>
+  <div class="textContainer">
+    <p>O Site dedicado aos amantes do terror! Aqui, você pode soltar sua imaginação e criar as histórias mais aterrorizantes que conseguir pensar,
+      compartilhar seus livros, séries e filmes favoritos e se conectar com outros fãs de terror.</p>
+  </div>
+  <button routerLink="/login">Login!</button>
+</div>
+<div class="containerAboutUs">
+  <div class="titleAboutUs">
+    <h2>Sobre Nós:</h2>
+  </div>
+  <div class="textAboutUs">
+    <span>
+      <p>Com nossa plataforma, você pode criar suas próprias histórias de terror e compartilhá-las com nossa comunidade de amantes do gênero.
+      Sinta a emoção de compartilhar suas histórias com outras pessoas que compartilham da mesma paixão e receba feedback para ajudar a aprimorar
+      sua escrita. Além disso, no HorrorStories, permitimos que você compartilhe seus livros, séries e filmes favoritos de terror com outros usuários,
+      descubra novas histórias assustadoras e conecte-se com outros fãs do gênero. Aqui, você encontrará uma ampla variedade de conteúdo de terror para explorar e
+      apreciar. E se você gosta de ler as histórias de outras pessoas, também temos uma seção dedicada a isso. Você pode se aventurar na mente de outros autores e
+      descobrir novas histórias para te manter acordado a noite toda.Em resumo, o HorrorStories é um espaço para os amantes do terror se conectarem, criarem e
+      compartilharem histórias assustadoras, e descobrirem novos livros, séries e filmes de terror. Junte-se à nossa comunidade e deixe sua imaginação correr solta!
+      </p>
+    </span>
+    <span><img src="assets/img/ghostLooking.png" style="float: right;"></span>
+  </div>
+  <button>Cadastre-se Já!</button>
+</div>
+<router-outlet></router-outlet>
