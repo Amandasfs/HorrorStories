@@ -1,56 +1,214 @@
 <style>
-.spacer {
-  flex: 1 1 auto;
-  margin-left: 2.5%;
-}
-img{
-  height: 3rem;
-  margin-left: 15px;
-  cursor: pointer;
-}
-.footer {
+  @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+  .spacer {
+    flex: 1 1 auto;
+    margin-left: 2.5%;
+  }
+  .title {
+    font-family: "Creepster", cursive;
+    font-size: 3rem;
+    color: #8b0000;
+  }
+  img {
+    height: 3rem;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  .footer {
     position: fixed;
     bottom: 0;
     justify-content: center;
     font-size: 1rem;
-    height: 5%;
-}
-a{
-  text-decoration: none;
-  color: 	#8B0000;
-  margin-left: 5%;
-  font-family: 'Merienda', cursive;
-  font-style: italic;
-}
-.github{
-  height: 2rem;
-}
-.title{
-  font-family: 'Creepster', cursive;
-  font-size: 3rem;
-  color: 	#8B0000;
-}
+  }
+  a {
+    text-decoration: none;
+    color: #8b0000;
+    margin-left: 5%;
+    font-family: "Merienda", cursive;
+    font-style: italic;
+  }
+  .github {
+    height: 2rem;
+  }
+  button {
+    background-color: transparent;
+    border: transparent;
+    margin-right: 5px;
+  }
+  span{
+    color: #8b0000;
+    font-family: 'Macondo', cursive;
+    font-size: 15px;
+    font-style: oblique;
+  }
 </style>
 
-<mat-toolbar  color="primary">
-  <span><img src="../assets/img/icon.title.png"></span>
-  <span class="title">Horror Stories</span>
-  <span class="spacer"></span>
-  <span><img src="../assets/img/icon.home.png"></span>
-  <span><img src="../assets/img/icon.category.png"></span>
-  <span><img src="../assets/img/icon.newbook.png"></span>
-  <span><img src="../assets/img/icon.stories.png"></span>
-  <span><img src="../assets/img/icon.movie.png"></span>
-  <span><img src="../assets/img/icon.myprofile.png"></span>
-  <span><img src="../assets/img/icon.speak.png"></span>
-</mat-toolbar>
+  <mat-toolbar  color="primary">
 
-<mat-toolbar class="footer" color="primary">
-  <span>
-      <img class="github" src="../assets/img/icon.github.png">
-  </span>
-  <span>
-    <a href="https://github.com/Amandasfs">Amanda F. Santos</a>
-  </span>
-</mat-toolbar>
-<router-outlet></router-outlet>
+    <span><img src="../assets/img/icon.title.png"></span>
+
+    <span class="title">Horror Stories</span>
+
+    <span class="spacer"></span>
+
+    <span><button routerLink="/home" mat-raised-button
+      matTooltip="Home"
+      matTooltipClass="example-tooltip-uppercase"
+      aria-label="Button that shows a red tooltip"
+      class="messageButton">
+      <img src="../assets/img/icon.home.png"></button></span>
+
+    <span>
+      <button [matMenuTriggerFor]="categoryMenu" mat-raised-button
+      matTooltip="Categorias"
+      matTooltipClass="example-tooltip-uppercase"
+      aria-label="Button that shows a red tooltip"
+      class="messageButton">
+        <img src="../assets/img/icon.category.png">
+      </button>
+    </span>
+    <mat-menu #categoryMenu="matMenu">
+      <button mat-menu-item>
+        <span>Casos reais</span>
+      </button>
+      <button mat-menu-item>
+        <span>Creepypasta</span>
+      </button>
+      <button mat-menu-item>
+        <span>Mistério</span>
+      </button>
+      <button mat-menu-item>
+        <span>Recomendações</span>
+      </button>
+      <button mat-menu-item>
+        <span>Suspense</span>
+      </button>
+      <button mat-menu-item>
+        <span>Terror</span>
+      </button>
+      <button mat-menu-item>
+        <span>True crime</span>
+      </button>
+    </mat-menu>
+
+    <span>
+      <button [matMenuTriggerFor]="storiesMenu" mat-raised-button
+      matTooltip="Histórias"
+      matTooltipClass="example-tooltip-uppercase"
+      aria-label="Button that shows a red tooltip"
+      class="messageButton">
+        <img src="../assets/img/icon.stories.png">
+      </button>
+    </span>
+    <mat-menu #storiesMenu="matMenu">
+      <button mat-menu-item>
+        <span>Casos reais</span>
+      </button>
+      <button mat-menu-item>
+        <span>Mistério</span>
+      </button>
+      <button mat-menu-item>
+        <span>Recomendações</span>
+      </button>
+      <button mat-menu-item>
+        <span>Suspense</span>
+      </button>
+      <button mat-menu-item>
+        <span>Terror</span>
+      </button>
+      <button mat-menu-item>
+        <span>True crime</span>
+      </button>
+    </mat-menu>
+
+    <span>
+      <button [matMenuTriggerFor]="movieMenu" mat-raised-button
+      matTooltip="Filmes"
+      matTooltipClass="example-tooltip-uppercase"
+      aria-label="Button that shows a red tooltip"
+      class="messageButton">
+        <img src="../assets/img/icon.movie.png">
+      </button>
+    </span>
+    <mat-menu #movieMenu="matMenu">
+      <button mat-menu-item>
+        <span>Animes</span>
+      </button>
+      <button mat-menu-item>
+        <span>Body Horror</span>
+      </button>
+      <button mat-menu-item>
+        <span>Cósmico</span>
+      </button>
+      <button mat-menu-item>
+        <span>Comico</span>
+      </button>
+      <button mat-menu-item>
+        <span>Documentário</span>
+      </button>
+      <button mat-menu-item>
+        <span>Found Footage</span>
+      </button>
+      <button mat-menu-item>
+        <span>Psicológico</span>
+      </button>
+      <button mat-menu-item>
+        <span>Séries</span>
+      </button>
+      <button mat-menu-item>
+        <span>Slashers</span>
+      </button>
+      <button mat-menu-item>
+        <span>Sobrenatural</span>
+      </button>
+      <button mat-menu-item>
+        <span>Teen</span>
+      </button>
+      <button mat-menu-item>
+        <span>Trash</span>
+      </button>
+    </mat-menu>
+
+    <span>
+      <button [matMenuTriggerFor]="myMenu" mat-raised-button
+      matTooltip="Perfil"
+      matTooltipClass="example-tooltip-uppercase"
+      aria-label="Button that shows a red tooltip"
+      class="messageButton">
+        <img src="../assets/img/icon.myprofile.png">
+      </button>
+    </span>
+    <mat-menu #myMenu="matMenu">
+      <button mat-menu-item>
+        <span>Meu Perfil</span>
+      </button>
+      <button mat-menu-item>
+        <span>Minhas Histórias</span>
+      </button>
+      <button mat-menu-item>
+        <span>Minhas Recomendações</span>
+      </button>
+      <button mat-menu-item>
+        <span>Meus Favoritos</span>
+      </button>
+      <button mat-menu-item>
+        <span>Configurações</span>
+      </button>
+    </mat-menu>
+
+    <span><button routerLink="/contactUs"mat-raised-button
+      matTooltip="Fale Conosco!"
+      matTooltipClass="example-tooltip-uppercase"
+      aria-label="Button that shows a red tooltip"
+      class="messageButton">
+      <img src="../assets/img/icon.speak.png"></button></span>
+ </mat-toolbar>
+  <mat-toolbar class="footer" color="primary">
+    <span>
+        <img class="github" src="../assets/img/icon.github.png">
+    </span>
+    <span>
+      <a href="https://github.com/Amandasfs">Amanda F. Santos</a>
+    </span>
+  </mat-toolbar>
+  <router-outlet></router-outlet>

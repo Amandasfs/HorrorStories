@@ -1,0 +1,48 @@
+<style>
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title{
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+  }
+  img{
+    height: 10rem;
+  }
+  h1{
+    color: 	#8B0000;
+    font-family: 'Creepster', cursive;
+    font-size: 5rem;
+  }
+</style>
+
+<div class="container">
+  <div class="title">
+    <h1>Fale Conosco!</h1>
+    <span><img src="assets/img/ghostHolding.png"></span>
+  </div>
+  <div class="form">
+    <form class="contact">
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Ex. pat@example.com" formControl="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Mensagem</mat-label>
+        <input matInput #message maxlength="256" placeholder="Ex. Eu preciso de ajuda com...">
+        <mat-hint align="start"><strong>Não divulgue informações pessoais</strong></mat-hint>
+        <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+      </mat-form-field>
+    </form>
+  </div>
+</div>
