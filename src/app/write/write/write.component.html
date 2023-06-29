@@ -1,1 +1,76 @@
-<p>write works!</p>
+<style>
+  h1{
+    font-family: "Creepster", cursive;
+    font-size: 3rem;
+    color: #8b0000;
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+  }
+  .create{
+    width: 99%;
+    height: 89%;
+    margin: 10px;
+    border: 1px solid #8b0000;
+  }
+  .tools{
+    width: 5rem;
+  }
+  .inputs{
+    width: 95rem;;
+  }
+  .title{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 50rem;
+    height: 2rem;
+  }
+  .titleL{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .storie{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 85rem;
+    height: 40rem;
+  }
+  .btn{
+    cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    background-color: #EEEEEE;
+    color: 	#8B0000;
+    font-family: 'Creepster', cursive;
+    border: transparent;
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+</style>
+
+<mat-drawer-container class="create">
+  <mat-drawer mode="side" class="tools" opened></mat-drawer>
+  <mat-drawer-content class="inputs">
+    <span><h1>Crie Uma História</h1></span>
+    <span>
+      <form>
+        <label class="titleL">Título:</label>
+        <input type="text" class="title">
+        <input type="file" ng-model="User.imageFile" size="30" id="imageFile" required="true"/>
+          <button class="button button-stable"  ng-click="selectImage();">Imagem</button>
+      
+      </form>
+    </span>
+    <span>
+      <form>
+        <mat-form-field class="storie">
+          <textarea matInput #storie maxlength="68000"  placeholder="Era uma vez..."></textarea>
+          <mat-hint align="end">{{storie.value.length}} / 68000</mat-hint>
+        </mat-form-field>
+      </form>
+    </span>
+    <button class="btn" routerLink="/home">Voltar</button>
+    <button class="btn">Enviar</button>
+  </mat-drawer-content>
+</mat-drawer-container>

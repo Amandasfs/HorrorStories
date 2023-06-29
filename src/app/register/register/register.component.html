@@ -1,1 +1,79 @@
-<p>register works!</p>
+<style>
+  .register{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title-container{
+    display: flex;
+    align-items: center;
+    margin-top: 8%;
+  }
+  .shadow{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    height: 50rem;
+    width: 40rem;
+    box-shadow: 1rem 1rem 3rem #E0E0E0 inset;
+    border-radius: 1.5rem;
+  }
+  span{
+    color: 	#8B0000;
+    font-family: 'Creepster', cursive;
+    font-size: 3rem;
+  }
+  form{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+  }
+  button{
+    cursor: pointer;
+    width: 15rem;
+    height: 5rem;
+    background-color: #EEEEEE;
+    color: 	#8B0000;
+    font-family: 'Creepster', cursive;
+    border: transparent;
+    font-size: 20px;
+  }
+  img{
+    height: 8rem;
+  }
+</style>
+<div class="register">
+  <div class="shadow">
+    <div class="title-container">
+        <span>Crie uma conta!</span>
+        <span><img src="assets/img/ghostInTheBox.png"></span>
+    </div>
+      <div class="container">
+        <div class="form-container">
+          <form action="register" class="registerClass">
+              <mat-form-field>
+                <mat-label>Nickname</mat-label>
+                <input type="text" matInput placeholder="Crie um nome de usuário">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="Exemple@email.com">
+              </mat-form-field>
+              <mat-form-field>
+               <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Crie uma senha entre 8 e 10 caractares">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Password</mat-label>
+                 <input type="password" matInput placeholder="Repita sua senha">
+               </mat-form-field>
+          </form>
+          <div class="buttons-container">
+              <button style="margin-right: 3rem;" routerLink="/home">Voltar</button>
+              <button>Cadastrar</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

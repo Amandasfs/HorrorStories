@@ -1,1 +1,72 @@
-<p>login works!</p>
+<style>
+  .login{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title-container{
+    display: flex;
+    align-items: center;
+    margin-top: 8%;
+  }
+  .shadow{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    height: 50rem;
+    width: 40rem;
+    box-shadow: 1rem 1rem 3rem #E0E0E0 inset;
+    border-radius: 1.5rem;
+  }
+  span{
+    color: 	#8B0000;
+    font-family: 'Creepster', cursive;
+    font-size: 5rem;
+  }
+  form{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+  }
+  button{
+    cursor: pointer;
+    width: 15rem;
+    height: 5rem;
+    background-color: #EEEEEE;
+    color: 	#8B0000;
+    font-family: 'Creepster', cursive;
+    border: transparent;
+    font-size: 20px;
+  }
+  img{
+    height: 10rem;
+  }
+</style>
+
+<div class="login">
+  <div class="shadow">
+    <div class="title-container">
+      <span>Login</span>
+      <span><img src="assets/img/ghostHolding.png"></span>
+    </div>
+    <div class="container">
+      <div class="form-container">
+        <form action="login" class="loginClass">
+          <mat-form-field>
+            <mat-label>Nickname</mat-label>
+            <input type="text" matInput placeholder="Nickname">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password">
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="buttons-container">
+        <button style="margin-right: 3rem;" routerLink="/home">Voltar</button>
+        <button>Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>

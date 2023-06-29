@@ -35,7 +35,7 @@ const routes: Routes = [
     path:'write', pathMatch:'full', redirectTo: 'write'
   },
   {
-    path: 'contactUs',
+    path: 'write',
     loadChildren: () => import('./write/write.module').then(m => m.WriteModule)
   }
 
